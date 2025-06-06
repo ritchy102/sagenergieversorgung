@@ -273,6 +273,71 @@
             transform: translateX(5px);
         }
         
+        /* Topic Sections */
+        .topic-section {
+            padding: 5rem 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .topic-section:nth-child(even) {
+            background-color: #f8fafc;
+        }
+        
+        .topic-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .topic-img {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .topic-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .topic-content h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--darker);
+        }
+        
+        .topic-content h3 {
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+            color: var(--primary);
+        }
+        
+        .topic-content p {
+            margin-bottom: 1rem;
+        }
+        
+        .formula {
+            background-color: #f1f5f9;
+            padding: 1rem;
+            border-radius: 8px;
+            font-family: monospace;
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--accent);
+        }
+        
+        .image-suggestion {
+            background-color: #e2e8f0;
+            padding: 0.75rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            color: #475569;
+        }
+        
         /* About Section */
         .about {
             background-color: var(--darker);
@@ -500,13 +565,16 @@
         /* Responsive */
         @media (max-width: 992px) {
             .about-container,
-            .contact-container {
+            .contact-container,
+            .topic-container {
                 grid-template-columns: 1fr;
             }
             
-            .about-img {
+            .about-img,
+            .topic-img {
                 max-width: 600px;
                 margin: 0 auto;
+                order: -1;
             }
             
             .stats-container {
@@ -548,7 +616,7 @@
             <a href="#" class="logo">Energievisionen</a>
             <ul class="nav-links">
                 <li><a href="#home">Start</a></li>
-                <li><a href="#features">Themen</a></li>
+                <li><a href="#topics">Themen</a></li>
                 <li><a href="#about">Über uns</a></li>
                 <li><a href="#contact">Kontakt</a></li>
             </ul>
@@ -561,7 +629,7 @@
             <h1>Die Zukunft der Energie</h1>
             <p>Entdecken Sie nachhaltige Energiekonzepte und moderne Technologien für eine grünere Zukunft</p>
             <div>
-                <a href="#features" class="btn">Themen entdecken</a>
+                <a href="#topics" class="btn">Themen entdecken</a>
                 <a href="#contact" class="btn btn-outline">Kontakt</a>
             </div>
         </div>
@@ -584,7 +652,7 @@
                     <div class="feature-content">
                         <h3>Reversible & irreversible Vorgänge</h3>
                         <p>Was lässt sich rückgängig machen – und was nicht? Reversible Vorgänge sind theoretische Prozesse, bei denen keine Energie verloren geht...</p>
-                        <a href="#" class="feature-link">Mehr erfahren <i class="fas fa-arrow-right"></i></a>
+                        <a href="#reversible" class="feature-link">Mehr erfahren <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
@@ -596,7 +664,7 @@
                     <div class="feature-content">
                         <h3>Entropie – Ordnung & Energie</h3>
                         <p>Warum entsteht bei jeder Energieumwandlung ein Verlust? Entropie ist ein Maß dafür, wie verteilt Energie in einem System ist...</p>
-                        <a href="#" class="feature-link">Mehr erfahren <i class="fas fa-arrow-right"></i></a>
+                        <a href="#entropy" class="feature-link">Mehr erfahren <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
@@ -608,7 +676,7 @@
                     <div class="feature-content">
                         <h3>Energiequellen im Überblick</h3>
                         <p>Welche Energieformen nutzen wir – und wie nachhaltig sind sie? Man unterscheidet zwischen Primär- und Sekundärenergie...</p>
-                        <a href="#" class="feature-link">Mehr erfahren <i class="fas fa-arrow-right"></i></a>
+                        <a href="#energy-sources" class="feature-link">Mehr erfahren <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -622,7 +690,7 @@
                     <div class="feature-content">
                         <h3>Das Energiedorf Wildpoldsried</h3>
                         <p>Wie ein kleines Dorf zur Energie-Vorbildregion wurde. Wildpoldsried erzeugt mehr als viermal so viel Strom, wie es verbraucht...</p>
-                        <a href="#" class="feature-link">Mehr erfahren <i class="fas fa-arrow-right"></i></a>
+                        <a href="#wildpoldsried" class="feature-link">Mehr erfahren <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
@@ -634,7 +702,7 @@
                     <div class="feature-content">
                         <h3>Persönlicher Energiebedarf</h3>
                         <p>Wie viel Energie verbrauchen Sie täglich – und wo können Sie sparen? Der durchschnittliche Verbrauch in Deutschland liegt bei 120 kWh/Tag...</p>
-                        <a href="#" class="feature-link">Mehr erfahren <i class="fas fa-arrow-right"></i></a>
+                        <a href="#personal-energy" class="feature-link">Mehr erfahren <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
@@ -646,12 +714,167 @@
                     <div class="feature-content">
                         <h3>Glossar & Formeln</h3>
                         <p>Wichtige Begriffe und Formeln einfach erklärt. Entropie (S): Unordnung im System – je höher, desto weniger nutzbare Energie...</p>
-                        <a href="#" class="feature-link">Mehr erfahren <i class="fas fa-arrow-right"></i></a>
+                        <a href="#glossary" class="feature-link">Mehr erfahren <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Topics Sections -->
+    <main id="topics">
+        <!-- Reversible Processes -->
+        <section id="reversible" class="topic-section">
+            <div class="container">
+                <div class="topic-container">
+                    <div class="topic-content">
+                        <h2>Reversible & irreversible Vorgänge</h2>
+                        <p>Was lässt sich rückgängig machen – und was nicht?</p>
+                        <p>Reversible Vorgänge sind theoretische Prozesse, bei denen keine Energie verloren geht – sie lassen sich rückgängig machen, ohne die Umwelt zu verändern. In Wirklichkeit sind fast alle Prozesse irreversibel: Zum Beispiel schmilzt ein Eiswürfel in der Sonne, aber er gefriert nicht einfach wieder zurück, ohne dass Energie zugeführt wird.</p>
+                        <p>Diese Unumkehrbarkeit bedeutet: Ein Teil der eingesetzten Energie kann nicht wieder vollständig genutzt werden. Das liegt an der Entropie, die bei jeder Energieumwandlung steigt – und das ist der Grund, warum Energie „verloren" geht.</p>
+                        
+                        <div class="image-suggestion">
+                            <strong>Bildvorschlag:</strong> „Eiswürfel schmilzt", „Auto bremst", „Dampf entweicht"
+                        </div>
+                    </div>
+                    <div class="topic-img">
+                        <img src="https://images.unsplash.com/photo-1518235506717-e1ed3306a89b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Reversible Prozesse">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Entropy -->
+        <section id="entropy" class="topic-section">
+            <div class="container">
+                <div class="topic-container">
+                    <div class="topic-img">
+                        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Entropie">
+                    </div>
+                    <div class="topic-content">
+                        <h2>Entropie – Ordnung, Unordnung & Energie</h2>
+                        <p>Warum entsteht bei jeder Energieumwandlung ein Verlust?</p>
+                        <p>Entropie ist ein Maß dafür, wie verteilt Energie in einem System ist. Je mehr Entropie, desto weniger nutzbare Energie bleibt. In jedem echten Prozess – zum Beispiel im Kraftwerk – entsteht Entropie. Sie ist der Grund, warum wir Kühltürme brauchen: Sie geben überschüssige Wärme ab, die sonst das System überhitzen würde.</p>
+                        
+                        <div class="formula">
+                            T = Q / S<br>
+                            (Temperatur = Wärme / Entropie)
+                        </div>
+                        
+                        <div class="image-suggestion">
+                            <strong>Bildvorschlag:</strong> „Kühlturm Kraftwerk", „Thermodynamik Entropie", „Wärmeabgabe"
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Energy Sources -->
+        <section id="energy-sources" class="topic-section">
+            <div class="container">
+                <div class="topic-container">
+                    <div class="topic-content">
+                        <h2>Energiequellen im Überblick</h2>
+                        <p>Welche Energieformen nutzen wir – und wie nachhaltig sind sie?</p>
+                        <p>Man unterscheidet zwischen Primärenergie (z.B. Wind, Kohle, Sonne, Uran) und Sekundärenergie (z.B. Strom, Wasserstoff oder Benzin).</p>
+                        <p>Zusätzlich unterscheidet man zwischen:</p>
+                        <ul style="margin-left: 1.5rem; margin-bottom: 1rem;">
+                            <li>Regenerativen Quellen: Sonne, Wind, Wasser, Biomasse, Geothermie</li>
+                            <li>Nicht-regenerativen Quellen: Erdöl, Kohle, Erdgas, Uran</li>
+                        </ul>
+                        <p>Regenerative Quellen sind umweltfreundlich und unerschöpflich. Nicht-regenerative sind endlich und klimaschädlich. Besonders spannend ist der Energieverbrauch weltweit: Während Deutschland auf erneuerbare Energien umsteigt, verbrauchen andere Länder noch viel Kohle und Öl.</p>
+                        
+                        <div class="image-suggestion">
+                            <strong>Bildvorschlag:</strong> „Solarpanels Landschaft", „Windräder", „Kohlekraftwerk vs. Windkraft Vergleich"
+                        </div>
+                    </div>
+                    <div class="topic-img">
+                        <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80" alt="Energiequellen">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Wildpoldsried -->
+        <section id="wildpoldsried" class="topic-section">
+            <div class="container">
+                <div class="topic-container">
+                    <div class="topic-img">
+                        <img src="https://images.unsplash.com/photo-1489392191049-fc10c97e7b45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Wildpoldsried">
+                    </div>
+                    <div class="topic-content">
+                        <h2>Das Energiedorf Wildpoldsried</h2>
+                        <p>Wie ein kleines Dorf zur Energie-Vorbildregion wurde</p>
+                        <p>Wildpoldsried in Bayern erzeugt mehr als viermal so viel Strom, wie es verbraucht – durch Photovoltaik, Windräder, Biogas und Bürgerprojekte. Die Einwohner betreiben ihre Anlagen oft selbst, investieren gemeinsam in Windkraft und nutzen Nahwärmenetze.</p>
+                        <p>Das Besondere: Die Bürger machen aktiv mit. Sie investieren gemeinsam, betreiben eigene Anlagen und profitieren vom Ertrag. Dieses Modell zeigt: Auch kleine Orte können große Wirkung haben, wenn man Technik, Gemeinschaft und Umweltbewusstsein zusammenbringt.</p>
+                        
+                        <div class="image-suggestion">
+                            <strong>Bildvorschlag:</strong> „Wildpoldsried Luftbild", „Dorf mit Solar und Windkraft", „Energiedorf Bayern"
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Personal Energy -->
+        <section id="personal-energy" class="topic-section">
+            <div class="container">
+                <div class="topic-container">
+                    <div class="topic-content">
+                        <h2>Dein persönlicher Energiebedarf</h2>
+                        <p>Wie viel Energie du pro Tag verbrauchst – und wo du sparen kannst</p>
+                        <p>Der durchschnittliche Energieverbrauch in Deutschland liegt bei rund 120 kWh pro Tag – das ist etwa doppelt so viel wie der Weltdurchschnitt. Manche Geräte – wie z.B. ein dauerhaft eingestecktes Handy-Ladegerät – verbrauchen über ein Jahr hinweg mehr, als man denkt.</p>
+                        <p>Durch bewusstes Verhalten lässt sich viel sparen – z.B. durch:</p>
+                        <ul style="margin-left: 1.5rem; margin-bottom: 1rem;">
+                            <li>Steckerleisten mit Schalter</li>
+                            <li>LED-Beleuchtung</li>
+                            <li>Abschalten von Standby-Geräten</li>
+                            <li>Energieeffiziente Haushaltsgeräte</li>
+                        </ul>
+                        
+                        <div class="image-suggestion">
+                            <strong>Bildvorschlag:</strong> „Smartphone laden", „Energieverbrauch Haushalt", „Strom sparen Tipps"
+                        </div>
+                    </div>
+                    <div class="topic-img">
+                        <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Persönlicher Energiebedarf">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Glossary -->
+        <section id="glossary" class="topic-section">
+            <div class="container">
+                <div class="topic-container">
+                    <div class="topic-img">
+                        <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Glossar">
+                    </div>
+                    <div class="topic-content">
+                        <h2>Glossar & Formeln</h2>
+                        <p>Wichtige Begriffe einfach erklärt</p>
+                        
+                        <h3>Begriffe</h3>
+                        <p><strong>Entropie (S):</strong> Unordnung im System – je höher, desto weniger nutzbare Energie</p>
+                        <p><strong>Wirkungsgrad (η):</strong> Anteil der eingesetzten Energie, der in nutzbare Energie umgewandelt wird (z.B. 30% bei Kohlekraft)</p>
+                        <p><strong>kWh (Kilowattstunde):</strong> Einheit für Energie – z.B. 1x Waschmaschine = ca. 1 kWh</p>
+                        
+                        <h3>Formeln</h3>
+                        <div class="formula">
+                            T = Q / S<br>
+                            (Temperatur = Wärme / Entropie)
+                        </div>
+                        
+                        <h3>Energiefluss im Kraftwerk</h3>
+                        <div class="formula">
+                            Brennstoff → Wärme → Dampf → Turbine → Generator → Strom<br>
+                            Verlustwärme → Kühlturm → Umgebung
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- About Section -->
     <section class="about" id="about">
@@ -772,19 +995,19 @@
                 <div class="footer-col">
                     <h4>Themen</h4>
                     <ul class="footer-links">
-                        <li><a href="#">Reversible Prozesse</a></li>
-                        <li><a href="#">Entropie</a></li>
-                        <li><a href="#">Energiequellen</a></li>
-                        <li><a href="#">Wildpoldsried</a></li>
-                        <li><a href="#">Persönlicher Bedarf</a></li>
+                        <li><a href="#reversible">Reversible Prozesse</a></li>
+                        <li><a href="#entropy">Entropie</a></li>
+                        <li><a href="#energy-sources">Energiequellen</a></li>
+                        <li><a href="#wildpoldsried">Wildpoldsried</a></li>
+                        <li><a href="#personal-energy">Persönlicher Bedarf</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-col">
                     <h4>Ressourcen</h4>
                     <ul class="footer-links">
-                        <li><a href="#">Glossar</a></li>
-                        <li><a href="#">Formelsammlung</a></li>
+                        <li><a href="#glossary">Glossar</a></li>
+                        <li><a href="#glossary">Formelsammlung</a></li>
                         <li><a href="#">Lehrmaterial</a></li>
                         <li><a href="#">Forschung</a></li>
                         <li><a href="#">Blog</a></li>
@@ -794,7 +1017,7 @@
                 <div class="footer-col">
                     <h4>Unterstützung</h4>
                     <ul class="footer-links">
-                        <li><a href="#">Kontakt</a></li>
+                        <li><a href="#contact">Kontakt</a></li>
                         <li><a href="#">FAQ</a></li>
                         <li><a href="#">Datenschutz</a></li>
                         <li><a href="#">Impressum</a></li>
@@ -820,14 +1043,28 @@
             }
         });
         
-        // Smooth scrolling for navigation links
+        // Smooth scrolling for all links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    
+                    // Update URL without page reload
+                    if (history.pushState) {
+                        history.pushState(null, null, targetId);
+                    } else {
+                        location.hash = targetId;
+                    }
+                }
             });
         });
         
@@ -844,7 +1081,7 @@
             });
         }, observerOptions);
         
-        document.querySelectorAll('.feature-card, .about-img, .contact-form').forEach(el => {
+        document.querySelectorAll('.feature-card, .about-img, .contact-form, .topic-container').forEach(el => {
             observer.observe(el);
         });
     </script>
