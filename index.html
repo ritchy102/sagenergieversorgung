@@ -3,389 +3,849 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Energieversorgung | Lernmaterial</title>
+    <title>Energievisionen | Nachhaltige Energiekonzepte</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary: #2c3e50;
-            --secondary: #3498db;
-            --accent: #e74c3c;
-            --light: #ecf0f1;
-            --dark: #2c3e50;
-            --success: #27ae60;
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #10b981;
+            --accent: #f59e0b;
+            --dark: #1e293b;
+            --darker: #0f172a;
+            --light: #f8fafc;
+            --gray: #94a3b8;
+            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
         }
         
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
         body {
-            background-color: #f9f9f9;
-            color: #333;
-            line-height: 1.6;
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.7;
+            overflow-x: hidden;
         }
         
-        header {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            padding: 2rem 0;
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+        
+        /* Header with Hero Image */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1489392191049-fc10c97e7b45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
             text-align: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 1s ease;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: 2px solid var(--primary);
+        }
+        
+        .btn:hover {
+            background-color: transparent;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            margin-left: 1rem;
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary);
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1.5rem 0;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+        
+        nav.scrolled {
+            background-color: rgba(30, 41, 59, 0.95);
+            padding: 1rem 0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 2rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary);
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+        
+        /* Sections */
+        section {
+            padding: 6rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--darker);
+            margin-bottom: 1rem;
+        }
+        
+        .section-title p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--gray);
+            font-size: 1.1rem;
         }
         
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 2rem;
         }
         
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .subtitle {
-            font-weight: 300;
-            opacity: 0.9;
-        }
-        
-        nav {
-            background-color: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        .nav-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        
-        .nav-item {
-            padding: 1.2rem 1.5rem;
-            color: var(--dark);
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            border-bottom: 3px solid transparent;
-        }
-        
-        .nav-item:hover, .nav-item.active {
-            color: var(--secondary);
-            border-bottom: 3px solid var(--secondary);
-        }
-        
-        main {
-            padding: 3rem 0;
-        }
-        
-        .grid {
+        /* Features Grid */
+        .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            padding: 0 1rem;
         }
         
-        .card {
-            background: white;
-            border-radius: 8px;
+        .feature-card {
+            background-color: white;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: var(--transition);
         }
         
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
         }
         
-        .card-icon {
-            font-size: 2.5rem;
-            padding: 1.5rem;
-            background: linear-gradient(135deg, var(--secondary), var(--primary));
+        .feature-img {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .feature-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .feature-card:hover .feature-img img {
+            transform: scale(1.1);
+        }
+        
+        .feature-content {
+            padding: 2rem;
+        }
+        
+        .feature-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--darker);
+        }
+        
+        .feature-content p {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+        }
+        
+        .feature-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            transition: var(--transition);
+        }
+        
+        .feature-link i {
+            margin-left: 0.5rem;
+            transition: var(--transition);
+        }
+        
+        .feature-link:hover {
+            color: var(--primary-dark);
+        }
+        
+        .feature-link:hover i {
+            transform: translateX(5px);
+        }
+        
+        /* About Section */
+        .about {
+            background-color: var(--darker);
             color: white;
         }
         
-        .card-content {
-            padding: 1.5rem;
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
         }
         
-        .card h3 {
-            margin-bottom: 1rem;
-            color: var(--primary);
+        .about-img {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
         }
         
-        footer {
-            background-color: var(--dark);
+        .about-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .about-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+        
+        .about-content p {
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+        
+        /* Stats */
+        .stats {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
             color: white;
             text-align: center;
-            padding: 2rem 0;
-            margin-top: 2rem;
+            padding: 4rem 0;
         }
         
-        section {
-            display: none;
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+        
+        .stat-item {
             padding: 2rem;
-            background: white;
-            border-radius: 8px;
-            margin: 2rem auto;
-            max-width: 900px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
         
-        section.active {
-            display: block;
-            animation: fadeIn 0.5s ease;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .formula {
-            background-color: #f8f9fa;
-            border-left: 4px solid var(--secondary);
-            padding: 1rem;
-            margin: 1rem 0;
-            font-family: monospace;
-            overflow-x: auto;
-        }
-        
-        .task-box {
-            background-color: #e8f4fc;
-            border-left: 4px solid var(--secondary);
-            padding: 1rem;
-            margin: 1.5rem 0;
-        }
-        
-        .task-box h4 {
-            color: var(--primary);
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
             margin-bottom: 0.5rem;
         }
         
-        @media (max-width: 768px) {
-            .nav-container {
-                flex-direction: column;
-                align-items: center;
+        .stat-text {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        /* Contact */
+        .contact {
+            background-color: #f1f5f9;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+        
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-info p {
+            margin-bottom: 2rem;
+            color: var(--gray);
+        }
+        
+        .contact-details {
+            margin-top: 2rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-icon {
+            background-color: var(--primary);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        .contact-form textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--darker);
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-col h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .footer-col h4:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--secondary);
+        }
+        
+        .footer-col p {
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links a {
+            color: white;
+            opacity: 0.8;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--secondary);
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            margin-top: 1.5rem;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            margin-right: 1rem;
+            color: white;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .about-container,
+            .contact-container {
+                grid-template-columns: 1fr;
             }
             
-            .nav-item {
-                width: 100%;
-                text-align: center;
+            .about-img {
+                max-width: 600px;
+                margin: 0 auto;
+            }
+            
+            .stats-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Energieversorgung</h1>
-            <p class="subtitle">Theorie, Beispiele & Aufgaben zum nachhaltigen Umgang mit Energie</p>
-        </div>
-    </header>
-    
-    <nav>
+    <!-- Navigation -->
+    <nav id="navbar">
         <div class="nav-container">
-            <a href="#" class="nav-item active" data-section="home">Startseite</a>
-            <a href="#" class="nav-item" data-section="reversible">Reversible Vorgänge</a>
-            <a href="#" class="nav-item" data-section="entropy">Entropie</a>
-            <a href="#" class="nav-item" data-section="energy-sources">Energiequellen</a>
-            <a href="#" class="nav-item" data-section="wildpoldsried">Wildpoldsried</a>
-            <a href="#" class="nav-item" data-section="personal-energy">Persönlicher Bedarf</a>
+            <a href="#" class="logo">Energievisionen</a>
+            <ul class="nav-links">
+                <li><a href="#home">Start</a></li>
+                <li><a href="#features">Themen</a></li>
+                <li><a href="#about">Über uns</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
         </div>
     </nav>
-    
-    <main>
-        <section id="home" class="active">
-            <h2>Lernmaterial zur Energieversorgung</h2>
-            <p>Diese Website bietet einen umfassenden Überblick über grundlegende Konzepte der Energieversorgung, von thermodynamischen Prinzipien bis zu praktischen Anwendungen der Energiewende.</p>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Die Zukunft der Energie</h1>
+            <p>Entdecken Sie nachhaltige Energiekonzepte und moderne Technologien für eine grünere Zukunft</p>
+            <div>
+                <a href="#features" class="btn">Themen entdecken</a>
+                <a href="#contact" class="btn btn-outline">Kontakt</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Energiekonzepte verstehen</h2>
+                <p>Lernen Sie die grundlegenden Prinzipien der Energieerhaltung und nachhaltigen Nutzung</p>
+            </div>
             
-            <div class="grid">
-                <div class="card">
-                    <div class="card-icon">🔄</div>
-                    <div class="card-content">
+            <div class="features-grid">
+                <!-- Card 1 -->
+                <div class="feature-card">
+                    <div class="feature-img">
+                        <img src="https://images.unsplash.com/photo-1518235506717-e1ed3306a89b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Eis schmilzt">
+                    </div>
+                    <div class="feature-content">
                         <h3>Reversible & irreversible Vorgänge</h3>
-                        <p>Unterschiede zwischen idealisierten Prozessen und realen Energieumwandlungen mit praktischen Beispielen.</p>
+                        <p>Was lässt sich rückgängig machen – und was nicht? Reversible Vorgänge sind theoretische Prozesse, bei denen keine Energie verloren geht...</p>
+                        <a href="#" class="feature-link">Mehr erfahren <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
-                <div class="card">
-                    <div class="card-icon">🔥</div>
-                    <div class="card-content">
-                        <h3>Entropie</h3>
-                        <p>Das Konzept der Unumkehrbarkeit in thermodynamischen Systemen und ihre Bedeutung für Energieeffizienz.</p>
+                <!-- Card 2 -->
+                <div class="feature-card">
+                    <div class="feature-img">
+                        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Kraftwerk">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Entropie – Ordnung & Energie</h3>
+                        <p>Warum entsteht bei jeder Energieumwandlung ein Verlust? Entropie ist ein Maß dafür, wie verteilt Energie in einem System ist...</p>
+                        <a href="#" class="feature-link">Mehr erfahren <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
-                <div class="card">
-                    <div class="card-icon">⚡</div>
-                    <div class="card-content">
-                        <h3>Energiequellen</h3>
-                        <p>Vergleich von Primär- und Sekundärenergie, regenerativen und nicht-regenerativen Quellen weltweit.</p>
+                <!-- Card 3 -->
+                <div class="feature-card">
+                    <div class="feature-img">
+                        <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80" alt="Windräder">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Energiequellen im Überblick</h3>
+                        <p>Welche Energieformen nutzen wir – und wie nachhaltig sind sie? Man unterscheidet zwischen Primär- und Sekundärenergie...</p>
+                        <a href="#" class="feature-link">Mehr erfahren <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="features-grid" style="margin-top: 2rem;">
+                <!-- Card 4 -->
+                <div class="feature-card">
+                    <div class="feature-img">
+                        <img src="https://images.unsplash.com/photo-1489392191049-fc10c97e7b45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Solardorf">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Das Energiedorf Wildpoldsried</h3>
+                        <p>Wie ein kleines Dorf zur Energie-Vorbildregion wurde. Wildpoldsried erzeugt mehr als viermal so viel Strom, wie es verbraucht...</p>
+                        <a href="#" class="feature-link">Mehr erfahren <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
-                <div class="card">
-                    <div class="card-icon">🏡</div>
-                    <div class="card-content">
-                        <h3>Wildpoldsried</h3>
-                        <p>Wie ein bayerisches Dorf die Energiewende vorlebt und mehr Strom produziert als es verbraucht.</p>
+                <!-- Card 5 -->
+                <div class="feature-card">
+                    <div class="feature-img">
+                        <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Energiesparen">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Persönlicher Energiebedarf</h3>
+                        <p>Wie viel Energie verbrauchen Sie täglich – und wo können Sie sparen? Der durchschnittliche Verbrauch in Deutschland liegt bei 120 kWh/Tag...</p>
+                        <a href="#" class="feature-link">Mehr erfahren <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
-                <div class="card">
-                    <div class="card-icon">📊</div>
-                    <div class="card-content">
-                        <h3>Persönlicher Bedarf</h3>
-                        <p>Berechnungen und Tipps zur Reduzierung des eigenen Energieverbrauchs im Alltag.</p>
+                <!-- Card 6 -->
+                <div class="feature-card">
+                    <div class="feature-img">
+                        <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Formeln">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Glossar & Formeln</h3>
+                        <p>Wichtige Begriffe und Formeln einfach erklärt. Entropie (S): Unordnung im System – je höher, desto weniger nutzbare Energie...</p>
+                        <a href="#" class="feature-link">Mehr erfahren <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-container">
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1559302994-5a30f5a78d20?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Über uns">
+                </div>
+                <div class="about-content">
+                    <h2>Über unser Projekt</h2>
+                    <p>Energievisionen ist eine Bildungsinitiative, die sich für die Vermittlung nachhaltiger Energiekonzepte einsetzt. Unser Ziel ist es, komplexe physikalische Prinzipien verständlich darzustellen und praktische Anwendungen aufzuzeigen.</p>
+                    <p>Von thermodynamischen Grundlagen bis zu modernen Energiedörfern wie Wildpoldsried - wir zeigen, wie die Energiewende gelingen kann.</p>
+                    <p>Unser Material eignet sich für Schüler, Studierende und alle, die sich für nachhaltige Energie interessieren.</p>
+                    <a href="#contact" class="btn" style="margin-top: 1rem;">Kontakt aufnehmen</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-number">6</div>
+                    <div class="stat-text">Themenbereiche</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">120+</div>
+                    <div class="stat-text">Lehrinhalte</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">4x</div>
+                    <div class="stat-text">Energieüberschuss</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-text">Nachhaltigkeit</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Kontaktieren Sie uns</h2>
+                <p>Haben Sie Fragen zu unseren Inhalten oder möchten Sie uns Feedback geben?</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Lassen Sie uns zusammenarbeiten</h3>
+                    <p>Wir sind offen für Kooperationen mit Schulen, Universitäten und Unternehmen, die sich für nachhaltige Energiebildung engagieren möchten.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Adresse</h4>
+                                <p>Musterstraße 123, 10115 Berlin</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>info@energievisionen.de</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4>Telefon</h4>
+                                <p>+49 30 12345678</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="card">
-                    <div class="card-icon">📚</div>
-                    <div class="card-content">
-                        <h3>Aufgaben & Übungen</h3>
-                        <p>Praktische Anwendungen des Wissens mit Lösungsansätzen für ein vertieftes Verständnis.</p>
-                    </div>
+                <div class="contact-form">
+                    <form>
+                        <input type="text" placeholder="Ihr Name" required>
+                        <input type="email" placeholder="Ihre Email" required>
+                        <input type="text" placeholder="Betreff">
+                        <textarea placeholder="Ihre Nachricht" required></textarea>
+                        <button type="submit" class="btn">Nachricht senden</button>
+                    </form>
                 </div>
             </div>
-        </section>
-        
-        <section id="reversible">
-            <h2>Reversible und irreversible Vorgänge</h2>
-            <p>In der Thermodynamik unterscheidet man zwischen reversiblen und irreversiblen Vorgängen. Ein reversibler Vorgang ist ein idealisierter Prozess, der sich vollständig rückgängig machen lässt, ohne dass dabei Energie verloren geht oder die Umwelt beeinflusst wird. Solche Vorgänge existieren in der Natur allerdings nicht wirklich – sie sind theoretische Modelle, die als Maßstab dienen.</p>
-            
-            <p>Irreversible Vorgänge hingegen treten ständig im Alltag auf: Wenn ein Auto fährt, wenn wir Wasser erhitzen oder wenn Strom aus einem Kraftwerk kommt. Bei diesen Vorgängen entsteht Entropie – ein Maß für die Unordnung oder Energieverteilung im System. Diese Entropie kann nicht zurückgewonnen werden. Deshalb ist es wichtig, irreversible Prozesse zu verstehen – insbesondere in der Energieumwandlung, wo Verluste durch Entropie unausweichlich sind.</p>
-            
-            <div class="task-box">
-                <h4>Aufgaben</h4>
-                <ul>
-                    <li>Nenne drei Beispiele für irreversible Vorgänge aus dem Alltag</li>
-                    <li>Erkläre, warum ein Pendel ohne Reibung ein reversibler Prozess wäre</li>
-                    <li>Vergleiche den Wirkungsgrad idealer (reversibler) und realer (irreversibler) Wärmekraftmaschinen</li>
-                </ul>
-            </div>
-        </section>
-        
-        <section id="entropy">
-            <h2>Entropie – Ordnung, Unordnung & Energie</h2>
-            <p>Entropie ist eines der zentralen Konzepte in der Thermodynamik. Man kann sie sich vereinfacht als „Maß für Unordnung" vorstellen – oder genauer: als die Unumkehrbarkeit eines Energieflusses. Jedes Mal, wenn Energie umgewandelt wird, entsteht Entropie. Das bedeutet: Nicht die gesamte Energie bleibt nutzbar.</p>
-            
-            <p>Wärmekraftwerke veranschaulichen diesen Zusammenhang besonders gut. Sie erzeugen Strom aus Wärme, meist durch die Verbrennung fossiler Brennstoffe oder durch Kernspaltung. Dabei entsteht Dampf, der eine Turbine antreibt. Doch ein Teil der Wärme kann nicht genutzt werden und muss über einen Kühlturm an die Umgebung abgegeben werden. Das ist kein Fehler, sondern eine Folge der unvermeidlichen Zunahme der Entropie.</p>
-            
-            <div class="formula">
-                T = Q/S (Temperatur = Wärme / Entropie)
-            </div>
-            
-            <div class="task-box">
-                <h4>Aufgaben</h4>
-                <ul>
-                    <li>Erstelle ein Energieflussdiagramm für ein Kraftwerk</li>
-                    <li>Erkläre, warum der Kühlturm nötig ist</li>
-                    <li>Beschreibe, wie Entropie beim Erhitzen von Wasser entsteht</li>
-                </ul>
-            </div>
-        </section>
-        
-        <section id="energy-sources">
-            <h2>Energiequellen – Übersicht & Vergleich</h2>
-            <p>Energiequellen sind die Basis unserer modernen Welt. Man unterscheidet sie nach zwei Hauptkriterien:</p>
-            
-            <ol>
-                <li><strong>Primärenergie</strong> ist Energie, die direkt aus der Natur stammt: Erdöl, Kohle, Wind, Sonne, Uran usw.</li>
-                <li><strong>Sekundärenergie</strong> entsteht durch Umwandlung, z.B. Strom, Wasserstoff oder Benzin.</li>
-            </ol>
-            
-            <p>Zusätzlich unterscheidet man zwischen:</p>
-            <ul>
-                <li><strong>Regenerativen Energiequellen</strong> wie Wind, Solar, Wasserkraft oder Biomasse</li>
-                <li><strong>Nicht-regenerativen Quellen</strong> wie Kohle, Öl, Gas oder Uran</li>
-            </ul>
-            
-            <p>Seit dem 2. Weltkrieg ist der globale Energiebedarf massiv gestiegen – vor allem in Industrieländern wie Deutschland, den USA oder China. Unterschiedliche Länder haben unterschiedliche Energiemixe – während manche auf Kohle setzen, investieren andere stark in Solar oder Atomkraft.</p>
-            
-            <div class="task-box">
-                <h4>Aufgaben</h4>
-                <ul>
-                    <li>Erstelle eine Tabelle: Primär vs. Sekundär, regenerativ vs. nicht-regenerativ</li>
-                    <li>Vergleiche den Energiebedarf von Deutschland, USA und China</li>
-                    <li>Beschreibe die Energieinfrastruktur eines Landes deiner Wahl</li>
-                </ul>
-            </div>
-        </section>
-        
-        <section id="wildpoldsried">
-            <h2>Das Energiedorf Wildpoldsried</h2>
-            <p>Wildpoldsried ist ein kleines Dorf in Bayern – aber ein großes Vorbild in Sachen nachhaltiger Energieversorgung. Das Dorf erzeugt mehr als viermal so viel Strom, wie es selbst verbraucht – ein echter Meilenstein.</p>
-            
-            <p>Die Energie kommt aus:</p>
-            <ul>
-                <li>Photovoltaikanlagen auf privaten Dächern</li>
-                <li>Windrädern am Dorfrand</li>
-                <li>Biogasanlagen aus landwirtschaftlichen Reststoffen</li>
-                <li>Blockheizkraftwerken und Nahwärmenetzen</li>
-            </ul>
-            
-            <p>Das Besondere: Die Bürger machen aktiv mit. Sie investieren gemeinsam, betreiben eigene Anlagen und profitieren vom Ertrag. Dieses Modell zeigt: Auch kleine Orte können große Wirkung haben, wenn man Technik, Gemeinschaft und Umweltbewusstsein zusammenbringt.</p>
-            
-            <div class="task-box">
-                <h4>Aufgaben</h4>
-                <ul>
-                    <li>Stelle dar, welche Technologien eingesetzt werden</li>
-                    <li>Entwickle einen eigenen Energieplan für ein Dorf</li>
-                    <li>Übertrage das Konzept auf eine Stadt deiner Wahl</li>
-                </ul>
-            </div>
-        </section>
-        
-        <section id="personal-energy">
-            <h2>Dein persönlicher Energiebedarf</h2>
-            <p>Auch du verbrauchst jeden Tag Energie – nicht nur durch Mobilität oder Heizung, sondern durch ganz alltägliche Dinge: Laden deines Smartphones, Betrieb deines Laptops, Streaming, Licht, Kochen.</p>
-            
-            <p>Der durchschnittliche Energieverbrauch in Deutschland liegt bei rund 120 kWh pro Tag – das ist etwa doppelt so viel wie der Weltdurchschnitt. Manche Geräte – wie z.B. ein dauerhaft eingestecktes Handy-Ladegerät – verbrauchen über ein Jahr hinweg mehr, als man denkt.</p>
-            
-            <div class="task-box">
-                <h4>Aufgaben</h4>
-                <ul>
-                    <li>Führe Buch über deinen täglichen Energieverbrauch</li>
-                    <li>Berechne das Einsparpotenzial von 5 Geräten</li>
-                    <li>Diskutiere: Was kannst du tun, um bewusster mit Energie umzugehen?</li>
-                </ul>
-            </div>
-        </section>
-    </main>
-    
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <p>Lernmaterial zur Energieversorgung | © 2023</p>
-            <p>Hosted on GitHub Pages | Designed for educational purposes</p>
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h4>Energievisionen</h4>
+                    <p>Bildungsinitiative für nachhaltige Energiekonzepte und moderne Technologien.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Themen</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Reversible Prozesse</a></li>
+                        <li><a href="#">Entropie</a></li>
+                        <li><a href="#">Energiequellen</a></li>
+                        <li><a href="#">Wildpoldsried</a></li>
+                        <li><a href="#">Persönlicher Bedarf</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Ressourcen</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Glossar</a></li>
+                        <li><a href="#">Formelsammlung</a></li>
+                        <li><a href="#">Lehrmaterial</a></li>
+                        <li><a href="#">Forschung</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Unterstützung</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Kontakt</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Datenschutz</a></li>
+                        <li><a href="#">Impressum</a></li>
+                        <li><a href="#">Spenden</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Energievisionen. Alle Rechte vorbehalten.</p>
+            </div>
         </div>
     </footer>
-    
+
     <script>
-        // Einfache Navigation zwischen den Abschnitten
-        document.querySelectorAll('.nav-item').forEach(item => {
-            item.addEventListener('click', function(e) {
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 
-                // Aktiven Zustand im Menü ändern
-                document.querySelectorAll('.nav-item').forEach(nav => {
-                    nav.classList.remove('active');
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
                 });
-                this.classList.add('active');
-                
-                // Abschnitt anzeigen
-                const sectionId = this.getAttribute('data-section');
-                document.querySelectorAll('section').forEach(section => {
-                    section.classList.remove('active');
-                });
-                document.getElementById(sectionId).classList.add('active');
             });
+        });
+        
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.feature-card, .about-img, .contact-form').forEach(el => {
+            observer.observe(el);
         });
     </script>
 </body>
