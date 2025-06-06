@@ -1,0 +1,410 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2022.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #ffffff}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #ffffff; min-height: 14.0px}
+    span.s1 {font-kerning: none}
+    span.s2 {font: 12.0px 'Apple Color Emoji'; font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;html lang="de"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;head&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>&lt;meta charset="UTF-8"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>&lt;title&gt;Energieversorgung | Lernmaterial&lt;/title&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>&lt;style&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>:root {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>--primary: #2c3e50;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>--secondary: #3498db;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>--accent: #e74c3c;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>--light: #ecf0f1;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>--dark: #2c3e50;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>--success: #27ae60;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>* {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>margin: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>padding: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>box-sizing: border-box;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>body {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>background-color: #f9f9f9;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>color: #333;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>line-height: 1.6;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>header {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>background: linear-gradient(135deg, var(--primary), var(--secondary));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>color: white;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>padding: 2rem 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>text-align: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>box-shadow: 0 4px 12px rgba(0,0,0,0.1);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>.container {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>max-width: 1200px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>margin: 0 auto;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>padding: 0 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>h1 {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>font-size: 2.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>margin-bottom: 1rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>.subtitle {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>font-weight: 300;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>opacity: 0.9;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>nav {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>background-color: white;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>box-shadow: 0 2px 10px rgba(0,0,0,0.05);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>position: sticky;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>top: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>z-index: 100;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>.nav-container {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>justify-content: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>flex-wrap: wrap;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>.nav-item {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>padding: 1.2rem 1.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>color: var(--dark);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>text-decoration: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>font-weight: 500;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>transition: all 0.3s ease;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>border-bottom: 3px solid transparent;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>.nav-item:hover, .nav-item.active {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>color: var(--secondary);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>border-bottom: 3px solid var(--secondary);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>main {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>padding: 3rem 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>.grid {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>display: grid;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>gap: 2rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>padding: 0 1rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>.card {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>background: white;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>border-radius: 8px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>overflow: hidden;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>box-shadow: 0 5px 15px rgba(0,0,0,0.08);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>transition: transform 0.3s ease, box-shadow 0.3s ease;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>.card:hover {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>transform: translateY(-5px);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>box-shadow: 0 8px 25px rgba(0,0,0,0.12);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>.card-icon {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>font-size: 2.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>padding: 1.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>background: linear-gradient(135deg, var(--secondary), var(--primary));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>color: white;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>.card-content {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>padding: 1.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>.card h3 {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>margin-bottom: 1rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>color: var(--primary);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>footer {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>background-color: var(--dark);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>color: white;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>text-align: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>padding: 2rem 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>margin-top: 2rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>section {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>display: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>padding: 2rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>background: white;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>border-radius: 8px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>margin: 2rem auto;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>max-width: 900px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>box-shadow: 0 5px 15px rgba(0,0,0,0.05);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>section.active {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>display: block;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>animation: fadeIn 0.5s ease;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>@keyframes fadeIn {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>from { opacity: 0; transform: translateY(10px); }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>to { opacity: 1; transform: translateY(0); }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>.formula {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>background-color: #f8f9fa;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>border-left: 4px solid var(--secondary);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>padding: 1rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>margin: 1rem 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>font-family: monospace;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>overflow-x: auto;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>.task-box {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>background-color: #e8f4fc;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>border-left: 4px solid var(--secondary);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>padding: 1rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>margin: 1.5rem 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>.task-box h4 {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>color: var(--primary);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>margin-bottom: 0.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>@media (max-width: 768px) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>.nav-container {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>flex-direction: column;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>align-items: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>.nav-item {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>width: 100%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>text-align: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>&lt;/style&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;body&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>&lt;header&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>&lt;div class="container"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>&lt;h1&gt;Energieversorgung&lt;/h1&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>&lt;p class="subtitle"&gt;Theorie, Beispiele &amp; Aufgaben zum nachhaltigen Umgang mit Energie&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>&lt;/header&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>&lt;nav&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>&lt;div class="nav-container"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>&lt;a href="#" class="nav-item active" data-section="home"&gt;Startseite&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>&lt;a href="#" class="nav-item" data-section="reversible"&gt;Reversible Vorgänge&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>&lt;a href="#" class="nav-item" data-section="entropy"&gt;Entropie&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>&lt;a href="#" class="nav-item" data-section="energy-sources"&gt;Energiequellen&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>&lt;a href="#" class="nav-item" data-section="wildpoldsried"&gt;Wildpoldsried&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>&lt;a href="#" class="nav-item" data-section="personal-energy"&gt;Persönlicher Bedarf&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>&lt;/nav&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>&lt;main&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>&lt;section id="home" class="active"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>&lt;h2&gt;Lernmaterial zur Energieversorgung&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>&lt;p&gt;Diese Website bietet einen umfassenden Überblick über grundlegende Konzepte der Energieversorgung, von thermodynamischen Prinzipien bis zu praktischen Anwendungen der Energiewende.&lt;/p&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>&lt;div class="grid"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>&lt;div class="card"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                   </span>&lt;div class="card-icon"&gt;</span><span class="s2">🔄</span><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                   </span>&lt;div class="card-content"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                       </span>&lt;h3&gt;Reversible &amp; irreversible Vorgänge&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                       </span>&lt;p&gt;Unterschiede zwischen idealisierten Prozessen und realen Energieumwandlungen mit praktischen Beispielen.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                   </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>&lt;div class="card"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                   </span>&lt;div class="card-icon"&gt;</span><span class="s2">🔥</span><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                   </span>&lt;div class="card-content"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                       </span>&lt;h3&gt;Entropie&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                       </span>&lt;p&gt;Das Konzept der Unumkehrbarkeit in thermodynamischen Systemen und ihre Bedeutung für Energieeffizienz.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                   </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>&lt;div class="card"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                   </span>&lt;div class="card-icon"&gt;</span><span class="s2">⚡</span><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                   </span>&lt;div class="card-content"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                       </span>&lt;h3&gt;Energiequellen&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                       </span>&lt;p&gt;Vergleich von Primär- und Sekundärenergie, regenerativen und nicht-regenerativen Quellen weltweit.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                   </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>&lt;div class="card"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                   </span>&lt;div class="card-icon"&gt;</span><span class="s2">🏡</span><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                   </span>&lt;div class="card-content"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                       </span>&lt;h3&gt;Wildpoldsried&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                       </span>&lt;p&gt;Wie ein bayerisches Dorf die Energiewende vorlebt und mehr Strom produziert als es verbraucht.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                   </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>&lt;div class="card"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                   </span>&lt;div class="card-icon"&gt;</span><span class="s2">📊</span><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                   </span>&lt;div class="card-content"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                       </span>&lt;h3&gt;Persönlicher Bedarf&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                       </span>&lt;p&gt;Berechnungen und Tipps zur Reduzierung des eigenen Energieverbrauchs im Alltag.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                   </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>&lt;div class="card"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                   </span>&lt;div class="card-icon"&gt;</span><span class="s2">📚</span><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                   </span>&lt;div class="card-content"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                       </span>&lt;h3&gt;Aufgaben &amp; Übungen&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                       </span>&lt;p&gt;Praktische Anwendungen des Wissens mit Lösungsansätzen für ein vertieftes Verständnis.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                   </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>&lt;/section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>&lt;section id="reversible"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>&lt;h2&gt;Reversible und irreversible Vorgänge&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>&lt;p&gt;In der Thermodynamik unterscheidet man zwischen reversiblen und irreversiblen Vorgängen. Ein reversibler Vorgang ist ein idealisierter Prozess, der sich vollständig rückgängig machen lässt, ohne dass dabei Energie verloren geht oder die Umwelt beeinflusst wird. Solche Vorgänge existieren in der Natur allerdings nicht wirklich – sie sind theoretische Modelle, die als Maßstab dienen.&lt;/p&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>&lt;p&gt;Irreversible Vorgänge hingegen treten ständig im Alltag auf: Wenn ein Auto fährt, wenn wir Wasser erhitzen oder wenn Strom aus einem Kraftwerk kommt. Bei diesen Vorgängen entsteht Entropie – ein Maß für die Unordnung oder Energieverteilung im System. Diese Entropie kann nicht zurückgewonnen werden. Deshalb ist es wichtig, irreversible Prozesse zu verstehen – insbesondere in der Energieumwandlung, wo Verluste durch Entropie unausweichlich sind.&lt;/p&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>&lt;div class="task-box"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>&lt;h4&gt;Aufgaben&lt;/h4&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>&lt;ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                   </span>&lt;li&gt;Nenne drei Beispiele für irreversible Vorgänge aus dem Alltag&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                   </span>&lt;li&gt;Erkläre, warum ein Pendel ohne Reibung ein reversibler Prozess wäre&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                   </span>&lt;li&gt;Vergleiche den Wirkungsgrad idealer (reversibler) und realer (irreversibler) Wärmekraftmaschinen&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>&lt;/ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>&lt;/section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>&lt;section id="entropy"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>&lt;h2&gt;Entropie – Ordnung, Unordnung &amp; Energie&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>&lt;p&gt;Entropie ist eines der zentralen Konzepte in der Thermodynamik. Man kann sie sich vereinfacht als „Maß für Unordnung" vorstellen – oder genauer: als die Unumkehrbarkeit eines Energieflusses. Jedes Mal, wenn Energie umgewandelt wird, entsteht Entropie. Das bedeutet: Nicht die gesamte Energie bleibt nutzbar.&lt;/p&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>&lt;p&gt;Wärmekraftwerke veranschaulichen diesen Zusammenhang besonders gut. Sie erzeugen Strom aus Wärme, meist durch die Verbrennung fossiler Brennstoffe oder durch Kernspaltung. Dabei entsteht Dampf, der eine Turbine antreibt. Doch ein Teil der Wärme kann nicht genutzt werden und muss über einen Kühlturm an die Umgebung abgegeben werden. Das ist kein Fehler, sondern eine Folge der unvermeidlichen Zunahme der Entropie.&lt;/p&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>&lt;div class="formula"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>T = Q/S (Temperatur = Wärme / Entropie)</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>&lt;div class="task-box"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>&lt;h4&gt;Aufgaben&lt;/h4&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>&lt;ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                   </span>&lt;li&gt;Erstelle ein Energieflussdiagramm für ein Kraftwerk&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                   </span>&lt;li&gt;Erkläre, warum der Kühlturm nötig ist&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                   </span>&lt;li&gt;Beschreibe, wie Entropie beim Erhitzen von Wasser entsteht&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>&lt;/ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>&lt;/section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>&lt;section id="energy-sources"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>&lt;h2&gt;Energiequellen – Übersicht &amp; Vergleich&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>&lt;p&gt;Energiequellen sind die Basis unserer modernen Welt. Man unterscheidet sie nach zwei Hauptkriterien:&lt;/p&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>&lt;ol&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>&lt;li&gt;&lt;strong&gt;Primärenergie&lt;/strong&gt; ist Energie, die direkt aus der Natur stammt: Erdöl, Kohle, Wind, Sonne, Uran usw.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>&lt;li&gt;&lt;strong&gt;Sekundärenergie&lt;/strong&gt; entsteht durch Umwandlung, z.B. Strom, Wasserstoff oder Benzin.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>&lt;/ol&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>&lt;p&gt;Zusätzlich unterscheidet man zwischen:&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>&lt;ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>&lt;li&gt;&lt;strong&gt;Regenerativen Energiequellen&lt;/strong&gt; wie Wind, Solar, Wasserkraft oder Biomasse&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>&lt;li&gt;&lt;strong&gt;Nicht-regenerativen Quellen&lt;/strong&gt; wie Kohle, Öl, Gas oder Uran&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>&lt;/ul&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>&lt;p&gt;Seit dem 2. Weltkrieg ist der globale Energiebedarf massiv gestiegen – vor allem in Industrieländern wie Deutschland, den USA oder China. Unterschiedliche Länder haben unterschiedliche Energiemixe – während manche auf Kohle setzen, investieren andere stark in Solar oder Atomkraft.&lt;/p&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>&lt;div class="task-box"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>&lt;h4&gt;Aufgaben&lt;/h4&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>&lt;ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                   </span>&lt;li&gt;Erstelle eine Tabelle: Primär vs. Sekundär, regenerativ vs. nicht-regenerativ&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                   </span>&lt;li&gt;Vergleiche den Energiebedarf von Deutschland, USA und China&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                   </span>&lt;li&gt;Beschreibe die Energieinfrastruktur eines Landes deiner Wahl&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>&lt;/ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>&lt;/section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>&lt;section id="wildpoldsried"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>&lt;h2&gt;Das Energiedorf Wildpoldsried&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>&lt;p&gt;Wildpoldsried ist ein kleines Dorf in Bayern – aber ein großes Vorbild in Sachen nachhaltiger Energieversorgung. Das Dorf erzeugt mehr als viermal so viel Strom, wie es selbst verbraucht – ein echter Meilenstein.&lt;/p&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>&lt;p&gt;Die Energie kommt aus:&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>&lt;ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>&lt;li&gt;Photovoltaikanlagen auf privaten Dächern&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>&lt;li&gt;Windrädern am Dorfrand&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>&lt;li&gt;Biogasanlagen aus landwirtschaftlichen Reststoffen&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>&lt;li&gt;Blockheizkraftwerken und Nahwärmenetzen&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>&lt;/ul&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>&lt;p&gt;Das Besondere: Die Bürger machen aktiv mit. Sie investieren gemeinsam, betreiben eigene Anlagen und profitieren vom Ertrag. Dieses Modell zeigt: Auch kleine Orte können große Wirkung haben, wenn man Technik, Gemeinschaft und Umweltbewusstsein zusammenbringt.&lt;/p&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>&lt;div class="task-box"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>&lt;h4&gt;Aufgaben&lt;/h4&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>&lt;ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                   </span>&lt;li&gt;Stelle dar, welche Technologien eingesetzt werden&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                   </span>&lt;li&gt;Entwickle einen eigenen Energieplan für ein Dorf&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                   </span>&lt;li&gt;Übertrage das Konzept auf eine Stadt deiner Wahl&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>&lt;/ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>&lt;/section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>&lt;section id="personal-energy"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>&lt;h2&gt;Dein persönlicher Energiebedarf&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>&lt;p&gt;Auch du verbrauchst jeden Tag Energie – nicht nur durch Mobilität oder Heizung, sondern durch ganz alltägliche Dinge: Laden deines Smartphones, Betrieb deines Laptops, Streaming, Licht, Kochen.&lt;/p&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>&lt;p&gt;Der durchschnittliche Energieverbrauch in Deutschland liegt bei rund 120 kWh pro Tag – das ist etwa doppelt so viel wie der Weltdurchschnitt. Manche Geräte – wie z.B. ein dauerhaft eingestecktes Handy-Ladegerät – verbrauchen über ein Jahr hinweg mehr, als man denkt.&lt;/p&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>&lt;div class="task-box"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>&lt;h4&gt;Aufgaben&lt;/h4&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>&lt;ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                   </span>&lt;li&gt;Führe Buch über deinen täglichen Energieverbrauch&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                   </span>&lt;li&gt;Berechne das Einsparpotenzial von 5 Geräten&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                   </span>&lt;li&gt;Diskutiere: Was kannst du tun, um bewusster mit Energie umzugehen?&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>&lt;/ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>&lt;/section&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>&lt;/main&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>&lt;footer&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>&lt;div class="container"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>&lt;p&gt;Lernmaterial zur Energieversorgung | © 2023&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>&lt;p&gt;Hosted on GitHub Pages | Designed for educational purposes&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>&lt;/footer&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>&lt;script&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>// Einfache Navigation zwischen den Abschnitten</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>document.querySelectorAll('.nav-item').forEach(item =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>item.addEventListener('click', function(e) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>e.preventDefault();</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>// Aktiven Zustand im Menü ändern</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>document.querySelectorAll('.nav-item').forEach(nav =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                   </span>nav.classList.remove('active');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>this.classList.add('active');</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>// Abschnitt anzeigen</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>const sectionId = this.getAttribute('data-section');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>document.querySelectorAll('section').forEach(section =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                   </span>section.classList.remove('active');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">               </span>document.getElementById(sectionId).classList.add('active');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">           </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+</body>
+</html>
